@@ -1,0 +1,8 @@
+version: '3.5'
+
+services:
+    node:
+        entrypoint: npm
+        command: run start:local
+        ports:
+          - ${DOCKER_HTTP_PORT}:8080

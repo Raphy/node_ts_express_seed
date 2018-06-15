@@ -1,0 +1,24 @@
+version: '3.5'
+
+services:
+    node:
+        image: node:latest
+        user: ${HOST_USER_ID}
+        depends_on:
+          - npm
+        env_file:
+            - .env
+        volumes:
+            - ./:/home/node/app
+        working_dir: /home/node/app
+
+    npm:
+        image: node:latest
+        user: ${HOST_USER_ID}
+        env_file:
+            - .env
+        volumes:
+            - ./:/home/node/app
+        working_dir: /home/node/app
+        entrypoint: npm
+        command: install

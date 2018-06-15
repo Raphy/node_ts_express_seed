@@ -1,0 +1,12 @@
+{
+    "extends": "tslint:latest",
+    "rules": {
+        "no-unused-variable": true,
+        "curly": true,
+        "quotemark": [
+            true,
+            "single"
+        ]
+    },
+    "rulesDirectory": []
+}
