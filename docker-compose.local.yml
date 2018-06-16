@@ -2,7 +2,13 @@ version: '3.5'
 
 services:
     node:
+        environment:
+            NODE_ENV: development
         entrypoint: npm
         command: run start:local
         ports:
           - ${DOCKER_HTTP_PORT}:8080
+
+    npm:
+        environment:
+            NODE_ENV: development
